@@ -1,7 +1,7 @@
 diff --git a/ext/syck/rubyext.c b/ext/syck/rubyext.c
 index 078de4f..8c4027f 100644
---- a/ext/syck/rubyext.c
-+++ b/ext/syck/rubyext.c
+--- ext/syck/rubyext.c
++++ ext/syck/rubyext.c
 @@ -268,9 +268,13 @@ rb_syck_mktime(str, len)
      {
          char padded[] = "000000";

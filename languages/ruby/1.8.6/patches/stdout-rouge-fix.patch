@@ -1,5 +1,5 @@
---- a/lib/mkmf.rb	2009-06-10 09:09:22.000000000 +0200
-+++ b/lib/mkmf.rb	2011-11-12 02:53:05.862766935 +0100
+--- lib/mkmf.rb	2009-06-10 09:09:22.000000000 +0200
++++ lib/mkmf.rb	2011-11-12 02:53:05.862766935 +0100
 @@ -168,19 +168,25 @@
  module Logging
    @log = nil
@@ -7,7 +7,7 @@
 -  @orgerr = $stderr.dup
 -  @orgout = $stdout.dup
    @postpone = 0
- 
+
    def self::open
      @log ||= File::open(@logfile, 'w')
      @log.sync = true
@@ -28,5 +28,5 @@
 +      orgout.close
 +    end
    end
- 
+
    def self::message(*s)
